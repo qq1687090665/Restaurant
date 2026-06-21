@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!43 &4300000
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sportbar_Ext floor_deck.001
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 48
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 18
+    localAABB:
+      m_Center: {x: 1.168211, y: 0, z: 2.842171E-13}
+      m_Extent: {x: 16.005304, y: 5.167118, z: 1.6314684E-06}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes:
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data:
+  m_MeshCompression: 2
+  m_IsReadable: 0
+  m_KeepVertices: 0
+  m_KeepIndices: 0
+  m_IndexFormat: 0
+  m_IndexBuffer: 0000010002000000020003000400000003000400030005000600070008000600080009000a0007000600090008000b000a000c00070009000b000d000e000c000a000d000b000f000e0010000c000d000f001100110010000e0011000f001000
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 0
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 0
+    _typelessdata:
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 54
+      m_Range: 32.01061
+      m_Start: -14.837093
+      m_Data: 5789e799a8761306e799a87613066853a87657896853a876ecf9e799a876ecf96853a876ecf96853a876ffff554da876fffffa9fa876ecf9e799a87657896853a8765789fa9fa8765789554da8765789e799a87613066853a8760000fa9fa8760000554da8761306e799a876
+      m_BitSize: 16
+    m_UV:
+      m_NumItems: 36
+      m_Range: 0.30280638
+      m_Start: 0.19015568
+      m_Data: 32c42f43fc32c42f43fc32c42f43fc00fc0fc0ff00fc0fc0ff00fc0fc0ff00fc0fc0ff00fc0fc0ff00fc0fc0ff
+      m_BitSize: 10
+    m_Normals:
+      m_NumItems: 36
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 36
+      m_Range: 1.9680991
+      m_Start: -0.96810573
+      m_Data: fe71fe6cfe6cfe6cff7dff7dff7dff7dff7dff7dff7dff7dff7dff7d5d004c065b004c06
+      m_BitSize: 8
+    m_Weights:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 18
+      m_Data: ffff03
+      m_BitSize: 1
+    m_TangentSigns:
+      m_NumItems: 36
+      m_Data: aa0a000000
+      m_BitSize: 1
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 48
+      m_Data: 2008200601838c620e3228a963125a8a9db49a63aaade7206b2f46e8e283
+      m_BitSize: 5
+    m_UVInfo: 5
+  m_LocalAABB:
+    m_Center: {x: 1.168211, y: 0, z: 2.842171E-13}
+    m_Extent: {x: 16.005304, y: 5.167118, z: 1.6314684E-06}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh:
+  m_BakedTriangleCollisionMesh:
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: -1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path:

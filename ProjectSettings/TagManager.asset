@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - PlayerCol
+  - Money
+  - Cash
+  - PlayerBack
+  - BuyPoint
+  - Asset
+  - Undefined
+  - Rod
+  - Body
+  - Table
+  - Food
+  - Customer
+  - Resource
+  - DecorationManager
+  - Wall
+  - Coffee
+  - Joystick
+  - Donut
+  - Corn
+  - Meat
+  - Chair
+  - FoodSpawner
+  - ExitPoint
+  - WaiterSpawner
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - WaiterNotWalkingArea
+  - NotWalkingArea
+  - WalkingArea
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
