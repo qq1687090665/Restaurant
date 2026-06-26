@@ -1,0 +1,15 @@
+D:\unity\Restaurant\TempDllCheck\bin\Debug\net10.0\TempDllCheck.exe
+D:\unity\Restaurant\TempDllCheck\bin\Debug\net10.0\TempDllCheck.deps.json
+D:\unity\Restaurant\TempDllCheck\bin\Debug\net10.0\TempDllCheck.runtimeconfig.json
+D:\unity\Restaurant\TempDllCheck\bin\Debug\net10.0\TempDllCheck.dll
+D:\unity\Restaurant\TempDllCheck\bin\Debug\net10.0\TempDllCheck.pdb
+D:\unity\Restaurant\TempDllCheck\obj\Debug\net10.0\TempDllCheck.GeneratedMSBuildEditorConfig.editorconfig
+D:\unity\Restaurant\TempDllCheck\obj\Debug\net10.0\TempDllCheck.AssemblyInfoInputs.cache
+D:\unity\Restaurant\TempDllCheck\obj\Debug\net10.0\TempDllCheck.AssemblyInfo.cs
+D:\unity\Restaurant\TempDllCheck\obj\Debug\net10.0\TempDllCheck.csproj.CoreCompileInputs.cache
+D:\unity\Restaurant\TempDllCheck\obj\Debug\net10.0\TempDllCheck.sourcelink.json
+D:\unity\Restaurant\TempDllCheck\obj\Debug\net10.0\TempDllCheck.dll
+D:\unity\Restaurant\TempDllCheck\obj\Debug\net10.0\refint\TempDllCheck.dll
+D:\unity\Restaurant\TempDllCheck\obj\Debug\net10.0\TempDllCheck.pdb
+D:\unity\Restaurant\TempDllCheck\obj\Debug\net10.0\TempDllCheck.genruntimeconfig.cache
+D:\unity\Restaurant\TempDllCheck\obj\Debug\net10.0\ref\TempDllCheck.dll

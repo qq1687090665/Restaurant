@@ -1,0 +1,72 @@
+{
+    "FileVersion": "2025.9.30",
+    "EnableAddressable": true,
+    "SupportExtensionless": true,
+    "LocationToLower": false,
+    "IncludeAssetGUID": false,
+    "ReplaceAssetPathWithAddress": false,
+    "OutputNameStyle": 0,
+    "BuildBundleType": 1,
+    "BuildPipeline": "EditorSimulateBuildPipeline",
+    "PackageName": "DefaultPackage",
+    "PackageVersion": "Simulate",
+    "PackageNote": "2026/6/26 17:41:47",
+    "AssetList": [
+        {
+            "Address": "HotUpdate.dll",
+            "AssetPath": "Assets/MyAssets/HotUpdate/CodeAsset/HotUpdate.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 0,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Scene_Game",
+            "AssetPath": "Assets/MyAssets/HotUpdate/Scenes/Scene_Game.unity",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 1,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "PlayerSkin",
+            "AssetPath": "Assets/MyAssets/HotUpdate/Skin/PlayerSkin.mat",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 2,
+            "DependBundleIDs": []
+        }
+    ],
+    "BundleList": [
+        {
+            "BundleName": "assets_myassets_hotupdate_codeasset.bundle",
+            "UnityCRC": 0,
+            "FileHash": "1303ab155240a32fd1b555e37166675a",
+            "FileCRC": 0,
+            "FileSize": 54272,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_myassets_hotupdate_scenes.bundle",
+            "UnityCRC": 0,
+            "FileHash": "b8b8645a13992d65a5f4614757ac5dcb",
+            "FileCRC": 0,
+            "FileSize": 1877788,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_myassets_hotupdate_skin.bundle",
+            "UnityCRC": 0,
+            "FileHash": "e6719fa122a0eabb89165ab2e77cf8a3",
+            "FileCRC": 0,
+            "FileSize": 2210,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        }
+    ]
+}

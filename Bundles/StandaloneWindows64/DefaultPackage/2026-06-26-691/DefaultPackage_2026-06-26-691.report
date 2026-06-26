@@ -1,0 +1,121 @@
+{
+    "Summary": {
+        "YooVersion": "2.3.18",
+        "UnityVersion": "2022.3.62f3c1",
+        "BuildDate": "2026/6/26 11:31:33",
+        "BuildSeconds": 7,
+        "BuildTarget": 19,
+        "BuildPipeline": "ScriptableBuildPipeline",
+        "BuildBundleType": 2,
+        "BuildPackageName": "DefaultPackage",
+        "BuildPackageVersion": "2026-06-26-691",
+        "BuildPackageNote": "2026/6/26 11:31:25",
+        "UniqueBundleName": false,
+        "EnableAddressable": true,
+        "SupportExtensionless": true,
+        "LocationToLower": false,
+        "IncludeAssetGUID": false,
+        "AutoCollectShaders": true,
+        "IgnoreRuleName": "YooAsset.Editor.NormalIgnoreRule",
+        "ClearBuildCacheFiles": true,
+        "UseAssetDependencyDB": false,
+        "EnableSharePackRule": true,
+        "SingleReferencedPackAlone": true,
+        "EncryptionServicesClassName": "YooAsset.Editor.EncryptionNone",
+        "ManifestProcessServicesClassName": "YooAsset.Editor.ManifestProcessNone",
+        "ManifestRestoreServicesClassName": "YooAsset.Editor.ManifestRestoreNone",
+        "FileNameStyle": 0,
+        "CompressOption": 2,
+        "DisableWriteTypeTree": false,
+        "IgnoreTypeTreeChanges": true,
+        "ReplaceAssetPathWithAddress": false,
+        "WriteLinkXML": true,
+        "CacheServerHost": "",
+        "CacheServerPort": 0,
+        "BuiltinShadersBundleName": "unityshaders.bundle",
+        "MonoScriptsBundleName": "",
+        "AssetFileTotalCount": 2,
+        "MainAssetTotalCount": 2,
+        "AllBundleTotalCount": 3,
+        "AllBundleTotalSize": 75578,
+        "EncryptedBundleTotalCount": 0,
+        "EncryptedBundleTotalSize": 0
+    },
+    "AssetInfos": [
+        {
+            "Address": "HotUpdate.dll",
+            "AssetPath": "Assets/MyAssets/HotUpdate/CodeAsset/HotUpdate.dll.bytes",
+            "AssetGUID": "63526d60783203740b52e97eef1d3d27",
+            "AssetTags": [],
+            "MainBundleName": "assets_myassets_hotupdate_codeasset.bundle",
+            "MainBundleSize": 27937,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "PlayerSkin",
+            "AssetPath": "Assets/MyAssets/HotUpdate/Skin/PlayerSkin.mat",
+            "AssetGUID": "f2e05b375393942419309c851b79cb4c",
+            "AssetTags": [],
+            "MainBundleName": "assets_myassets_hotupdate_skin.bundle",
+            "MainBundleSize": 2659,
+            "DependAssets": [],
+            "DependBundles": [
+                "unityshaders.bundle"
+            ]
+        }
+    ],
+    "BundleInfos": [
+        {
+            "BundleName": "assets_myassets_hotupdate_codeasset.bundle",
+            "FileName": "8532865be9a0217aa386c681355970f4.bundle",
+            "FileHash": "8532865be9a0217aa386c681355970f4",
+            "FileCRC": 2769210510,
+            "FileSize": 27937,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundles": [],
+            "ReferenceBundles": [],
+            "BundleContents": [
+                {
+                    "AssetPath": "Assets/MyAssets/HotUpdate/CodeAsset/HotUpdate.dll.bytes",
+                    "AssetGUID": "63526d60783203740b52e97eef1d3d27"
+                }
+            ]
+        },
+        {
+            "BundleName": "assets_myassets_hotupdate_skin.bundle",
+            "FileName": "cada645f2a07a175ad38a6a389f7ae0e.bundle",
+            "FileHash": "cada645f2a07a175ad38a6a389f7ae0e",
+            "FileCRC": 1447043047,
+            "FileSize": 2659,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundles": [
+                "unityshaders.bundle"
+            ],
+            "ReferenceBundles": [],
+            "BundleContents": [
+                {
+                    "AssetPath": "Assets/MyAssets/HotUpdate/Skin/PlayerSkin.mat",
+                    "AssetGUID": "f2e05b375393942419309c851b79cb4c"
+                }
+            ]
+        },
+        {
+            "BundleName": "unityshaders.bundle",
+            "FileName": "a5ae8c1e59ae4273213702117ae060ca.bundle",
+            "FileHash": "a5ae8c1e59ae4273213702117ae060ca",
+            "FileCRC": 2461624888,
+            "FileSize": 44982,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundles": [],
+            "ReferenceBundles": [
+                "assets_myassets_hotupdate_skin.bundle"
+            ],
+            "BundleContents": []
+        }
+    ],
+    "IndependAssets": []
+}
