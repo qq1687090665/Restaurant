@@ -1,0 +1,401 @@
+{
+    "FileVersion": "2025.9.30",
+    "EnableAddressable": true,
+    "SupportExtensionless": true,
+    "LocationToLower": false,
+    "IncludeAssetGUID": false,
+    "ReplaceAssetPathWithAddress": false,
+    "OutputNameStyle": 0,
+    "BuildBundleType": 2,
+    "BuildPipeline": "ScriptableBuildPipeline",
+    "PackageName": "DefaultPackage",
+    "PackageVersion": "2026-06-26-1407",
+    "PackageNote": "2026/6/26 23:27:41",
+    "AssetList": [
+        {
+            "Address": "HotUpdate.dll",
+            "AssetPath": "Assets/MyAssets/HotUpdate/CodeAsset/HotUpdate.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 0,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Scene_Game",
+            "AssetPath": "Assets/MyAssets/HotUpdate/Scenes/Scene_Game.unity",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 1,
+            "DependBundleIDs": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+            ]
+        },
+        {
+            "Address": "PlayerSkin",
+            "AssetPath": "Assets/MyAssets/HotUpdate/Skin/PlayerSkin.mat",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 2,
+            "DependBundleIDs": [
+                26
+            ]
+        }
+    ],
+    "BundleList": [
+        {
+            "BundleName": "assets_myassets_hotupdate_codeasset.bundle",
+            "UnityCRC": 3021667874,
+            "FileHash": "0a914826c60ea9a94b99861ba3d3fc86",
+            "FileCRC": 2349780960,
+            "FileSize": 29138,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_myassets_hotupdate_scenes.bundle",
+            "UnityCRC": 2237601003,
+            "FileHash": "60f70669bc979ea4499f9e6108a1f302",
+            "FileCRC": 154341296,
+            "FileSize": 183111,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+            ]
+        },
+        {
+            "BundleName": "assets_myassets_hotupdate_skin.bundle",
+            "UnityCRC": 3128824904,
+            "FileHash": "838216f0b8ce8ad8c4c1781d4e3b5683",
+            "FileCRC": 1800176751,
+            "FileSize": 2659,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                26
+            ]
+        },
+        {
+            "BundleName": "share_assets_kenney_holiday-kit_models_fbx_format.bundle",
+            "UnityCRC": 466125801,
+            "FileHash": "a4ddeb45efc846704fca75c37494e568",
+            "FileCRC": 3732282540,
+            "FileSize": 114906,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                4,
+                26
+            ]
+        },
+        {
+            "BundleName": "share_assets_kenney_holiday-kit_models_fbx_format_textures.bundle",
+            "UnityCRC": 4157082792,
+            "FileHash": "3ba383323f226ac0a0109ab88585b1c3",
+            "FileCRC": 1529430148,
+            "FileSize": 24689,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_animations_bus.bundle",
+            "UnityCRC": 2008533518,
+            "FileHash": "305f7fadc66b575aaf306c75a45bc43b",
+            "FileCRC": 4289670365,
+            "FileSize": 9377,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_animations_cooks.bundle",
+            "UnityCRC": 2346569538,
+            "FileHash": "974002fa33d27bc687a83adb73a913f2",
+            "FileCRC": 89614836,
+            "FileSize": 143928,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_animations_customer.bundle",
+            "UnityCRC": 3509690157,
+            "FileHash": "276b9021e62b8b25bc2513be592ba3dd",
+            "FileCRC": 3696522631,
+            "FileSize": 126679,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_animations_player.bundle",
+            "UnityCRC": 1953255202,
+            "FileHash": "e758a1d7493004af3b240777faac3bc9",
+            "FileCRC": 3165215404,
+            "FileSize": 73272,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_animations_receptionist.bundle",
+            "UnityCRC": 900340599,
+            "FileHash": "79d13c41f12ffdca2e6ef6cce304ef0a",
+            "FileCRC": 1353423056,
+            "FileSize": 26643,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_animations_waiter.bundle",
+            "UnityCRC": 1494348659,
+            "FileHash": "075b59e920ef3f28b946a986e554cd1a",
+            "FileCRC": 2234984565,
+            "FileSize": 80699,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_audio.bundle",
+            "UnityCRC": 175937562,
+            "FileHash": "edfd983a4ccb4f6b5a8bfd3b64b3d640",
+            "FileCRC": 819407303,
+            "FileSize": 2038905,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_avatar.bundle",
+            "UnityCRC": 325405050,
+            "FileHash": "efb4561f92d57da4b4ee39f668697755",
+            "FileCRC": 3125577918,
+            "FileSize": 7824,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_font.bundle",
+            "UnityCRC": 3937117467,
+            "FileHash": "7e592fcdbcc3b3bab69d31179e72d099",
+            "FileCRC": 2837015284,
+            "FileSize": 577491,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_materials.bundle",
+            "UnityCRC": 627380654,
+            "FileHash": "e5d401626f184b35ff1853eae91ac5b8",
+            "FileCRC": 486656749,
+            "FileSize": 6166,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                20,
+                21,
+                26
+            ]
+        },
+        {
+            "BundleName": "share_assets_myassets_mesh.bundle",
+            "UnityCRC": 158255488,
+            "FileHash": "6497d92ff146428bcf8a9c10989cd996",
+            "FileCRC": 1168559428,
+            "FileSize": 1426699,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                26
+            ]
+        },
+        {
+            "BundleName": "share_assets_myassets_prefabs.bundle",
+            "UnityCRC": 3250182625,
+            "FileHash": "206851a8343383a20727d97d3d8726e5",
+            "FileCRC": 1203268369,
+            "FileSize": 73252,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                7,
+                10,
+                12,
+                14,
+                15,
+                17,
+                20,
+                21,
+                22,
+                23,
+                26
+            ]
+        },
+        {
+            "BundleName": "share_assets_myassets_prefabs_foods.bundle",
+            "UnityCRC": 1585032792,
+            "FileHash": "a6b0783f8d34cf5da57b99a48285ec15",
+            "FileCRC": 1847305726,
+            "FileSize": 6567,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                14,
+                15,
+                20,
+                21,
+                26
+            ]
+        },
+        {
+            "BundleName": "share_assets_myassets_prefabs_ui.bundle",
+            "UnityCRC": 2195985796,
+            "FileHash": "f249ce137792967c445e157b624007b2",
+            "FileCRC": 3772680399,
+            "FileSize": 12770,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                13,
+                20
+            ]
+        },
+        {
+            "BundleName": "share_assets_myassets_scenes_game.bundle",
+            "UnityCRC": 804502695,
+            "FileHash": "4cc198b65a894a50ef43fd88861ed130",
+            "FileCRC": 979946587,
+            "FileSize": 15369,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_sprites.bundle",
+            "UnityCRC": 1771233600,
+            "FileHash": "d1a80cbf24641f56c5320ed3aac18aec",
+            "FileCRC": 3747045273,
+            "FileSize": 203554,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_myassets_textures.bundle",
+            "UnityCRC": 174930920,
+            "FileHash": "4a63a142479152aa5b918eb5e099ee71",
+            "FileCRC": 2413590083,
+            "FileSize": 2356909,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_textmesh_pro_fonts.bundle",
+            "UnityCRC": 3573328266,
+            "FileHash": "a7448dee4ca58eebb7a2b47c092a7418",
+            "FileCRC": 1409679819,
+            "FileSize": 227271,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_textmesh_pro_resources_fonts_&_materials.bundle",
+            "UnityCRC": 2053767411,
+            "FileHash": "ebf7702e06b051b45e9ac0d2081b2467",
+            "FileCRC": 3167569706,
+            "FileSize": 373541,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                22,
+                26
+            ]
+        },
+        {
+            "BundleName": "share_assets_touchjoysticks_environmentmaterial.bundle",
+            "UnityCRC": 2516932780,
+            "FileHash": "12f3c60ba5a743ae2ca4cb17e7417f28",
+            "FileCRC": 490030934,
+            "FileSize": 2669,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                26
+            ]
+        },
+        {
+            "BundleName": "share_packages_com_unity_inputsystem_inputsystem_plugins_playerinput.bundle",
+            "UnityCRC": 918848625,
+            "FileHash": "56189b9ee6d7b1413308b09d8ad4e5db",
+            "FileCRC": 1958757506,
+            "FileSize": 7694,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "unityshaders.bundle",
+            "UnityCRC": 2345690001,
+            "FileHash": "ea14b66cd9b5d292e0b86866aa67ccd8",
+            "FileCRC": 363052579,
+            "FileSize": 34708605,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        }
+    ]
+}

@@ -175,7 +175,7 @@ public class Boot : MonoBehaviour
     private string GetHostServerURL()
     {
         string hostServerIP = "http://localhost:3939";
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+#if      UNITY_STANDALONE_WIN
         return $"{hostServerIP}/cdn/PC";
 #elif UNITY_ANDROID
         return $"{hostServerIP}/cdn/Android";

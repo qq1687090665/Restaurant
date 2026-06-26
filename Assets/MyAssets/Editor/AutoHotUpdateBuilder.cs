@@ -1,52 +1,153 @@
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using System.Collections.Generic;
 
 public static class AutoHotUpdateBuilder
 {
-    //【核心配置】：请确保这里填的是你项目中放置 .bytes 资源的真实文件夹路径
-    private static readonly string TargetFolder = "Assets/MyAssets/HotUpdate/CodeAsset";
-    private static readonly string DllName = "HotUpdate.dll";
-    private static readonly string BytesName = "HotUpdate.dll.bytes";
+    // 基础配置：热更资源存放的目标根目录
+    private static readonly string TargetRootFolder = "Assets/MyAssets/HotUpdate/CodeAsset";
 
-    // 特性标签：在 Unity 顶部菜单栏生成 [Tools -> 热更新 -> 一键编译并热更DLL] 按钮
-    [MenuItem("Tools/热更新/一键编译并热更DLL")]
-    public static void CompileAndCopyDLL()
+    [MenuItem("Tools/热更新/一键编译并热更全部DLL")]
+    public static void CompileAndCopyAllDLLs()
     {
-        // 1. 自动获取当前 Unity Build Settings 激活的平台 (如 Android 或 Windows)
+        // 1. 获取当前激活平台
         BuildTarget activeTarget = EditorUserBuildSettings.activeBuildTarget;
-        Debug.Log($"<color=yellow>[AutoBuilder]</color> 开始编译目标平台 <color=cyan>{activeTarget}</color> 的热更 DLL...");
+        Debug.Log($"<color=yellow>[AutoBuilder]</color> 开始编译目标平台 <color=cyan>{activeTarget}</color> 的代码...");
 
-        // 2. 核心：通过代码触发 HybridCLR 的原生的 CompileDll 命令
+        // 2. 执行 HybridCLR 编译
         HybridCLR.Editor.Commands.CompileDllCommand.CompileDll(activeTarget);
 
-        // 3. 计算源 DLL 的绝对物理路径
-        // 相当于：项目根目录/HybridCLRData/HotUpdateDlls/平台名/HotUpdate.dll
+        // 3. 计算路径
         string projectRoot = Path.Combine(Application.dataPath, "..");
-        string sourceDir = Path.Combine(projectRoot, "HybridCLRData", "HotUpdateDlls", activeTarget.ToString());
-        string sourcePath = Path.Combine(sourceDir, DllName);
-        string targetPath = Path.Combine(TargetFolder, BytesName);
+        string hotUpdateDllSrcDir = Path.Combine(projectRoot, "HybridCLRData", "HotUpdateDlls", activeTarget.ToString());
 
-        // 4. 安全检查：如果目标文件夹不存在，自动创建它
-        if (!Directory.Exists(TargetFolder))
+        // 安全检查与目录创建（合规的 Unity 做法）
+        CheckAndCreateFolder(TargetRootFolder);
+
+        int copyCount = 0;
+
+        // 4. 【核心优化】：动态获取 HybridCLR 配置中所有的热更新 DLL 名称，杜绝硬编码
+        // 注：不同版本 HybridCLR 的 API 稍有差异，以下为较新版本的标准获取方式
+        List<string> hotUpdateAssemblies = HybridCLR.Editor.SettingsUtil.AOTAssemblyNames;
+
+        foreach (var dllName in hotUpdateAssemblies)
         {
-            Directory.CreateDirectory(TargetFolder);
+            string sourcePath = Path.Combine(hotUpdateDllSrcDir, dllName);
+            string targetPath = Path.Combine(TargetRootFolder, dllName + ".bytes"); // 自动加 .bytes 后缀
+
+            if (File.Exists(sourcePath))
+            {
+                File.Copy(sourcePath, targetPath, true);
+                Debug.Log($"<color=white>[AutoBuilder]</color> 已同步热更程序集: <color=green>{dllName}.bytes</color>");
+                copyCount++;
+            }
+            else
+            {
+                Debug.LogError($"<color=red>[AutoBuilder]</color> 未在产物目录找到配置的 Dll: {sourcePath}");
+            }
         }
 
-        // 5. 核心：执行物理文件复制与强行覆写
-        if (File.Exists(sourcePath))
+        // 5. 刷新资源数据库
+        if (copyCount > 0)
         {
-            // 第三个参数为 true 表示如果文件存在则直接覆盖
-            File.Copy(sourcePath, targetPath, true);
-            Debug.Log($"<color=green>[AutoBuilder] 成功！</color> 已将最新 DLL 复制并重命名至: {targetPath}");
-
-            // 6. 极其重要：强行刷新 Unity 资源数据库
             AssetDatabase.Refresh();
-            Debug.Log("<color=green>[AutoBuilder]</color> 资源数据库已刷新，YooAsset 已可识别最新文件！");
+            Debug.Log($"<color=green>[AutoBuilder] 大成功！</color> 共成功同步 {copyCount} 个热更 Dll，YooAsset 已可识别！");
         }
-        else
+    }
+
+    [MenuItem("Tools/热更新/收集Shader变体并配置到GraphicsSettings")]
+    public static void CollectShaderVariantsAndSetup()
+    {
+        const string packageName = "DefaultPackage";
+        string savePath = ShaderVariantCollectorSetting.GeFileSavePath(packageName);
+        int processCapacity = ShaderVariantCollectorSetting.GeProcessCapacity(packageName);
+
+        Debug.Log($"<color=yellow>[ShaderVariant]</color> 开始收集 <color=cyan>{packageName}</color> 包的 Shader 变体...");
+        Debug.Log($"<color=yellow>[ShaderVariant]</color> 保存路径: {savePath}");
+
+        ShaderVariantCollector.Run(savePath, packageName, processCapacity, () =>
         {
-            Debug.LogError($"<color=red>[AutoBuilder] 失败！</color> 未在路径找到编译产物，请检查 HybridCLR 菜单是否正常: {sourcePath}");
+            // 收集完成后，自动添加到 GraphicsSettings 的 Preloaded Shaders
+            AddSVCToPreloadedShaders(savePath);
+        });
+    }
+
+    /// <summary>
+    /// 将 ShaderVariantCollection 添加到 GraphicsSettings 的 Preloaded Shaders 列表
+    /// </summary>
+    private static void AddSVCToPreloadedShaders(string svcPath)
+    {
+        ShaderVariantCollection svc = AssetDatabase.LoadAssetAtPath<ShaderVariantCollection>(svcPath);
+        if (svc == null)
+        {
+            Debug.LogError($"<color=red>[ShaderVariant]</color> 未找到 SVC 文件: {svcPath}");
+            return;
+        }
+
+        // 通过 SerializedObject 修改 GraphicsSettings 的 m_PreloadedShaders
+        var graphicsSettingsAssets = AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/GraphicsSettings.asset");
+        if (graphicsSettingsAssets == null || graphicsSettingsAssets.Length == 0)
+        {
+            Debug.LogError("<color=red>[ShaderVariant]</color> 找不到 GraphicsSettings.asset");
+            return;
+        }
+
+        var graphicsSettingsObj = graphicsSettingsAssets[0];
+        using (var so = new SerializedObject(graphicsSettingsObj))
+        {
+            var preloadedShadersProp = so.FindProperty("m_PreloadedShaders");
+            if (preloadedShadersProp == null)
+            {
+                Debug.LogError("<color=red>[ShaderVariant]</color> 找不到 m_PreloadedShaders 属性");
+                return;
+            }
+
+            // 检查是否已经存在
+            for (int i = 0; i < preloadedShadersProp.arraySize; i++)
+            {
+                var element = preloadedShadersProp.GetArrayElementAtIndex(i);
+                if (element.objectReferenceValue == svc)
+                {
+                    Debug.Log($"<color=green>[ShaderVariant]</color> {svc.name} 已经在 Preloaded Shaders 列表中，跳过添加。");
+                    return;
+                }
+            }
+
+            // 添加新项
+            int index = preloadedShadersProp.arraySize;
+            preloadedShadersProp.InsertArrayElementAtIndex(index);
+            var newElement = preloadedShadersProp.GetArrayElementAtIndex(index);
+            newElement.objectReferenceValue = svc;
+
+            so.ApplyModifiedProperties();
+            Debug.Log($"<color=green>[ShaderVariant]</color> 已将 {svc.name} 添加到 Preloaded Shaders！");
+        }
+
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+
+        Debug.Log("<color=green>[ShaderVariant] 大成功！</color> Shader 变体已收集并已配置到 Graphics Settings。现在重新运行场景应该不会再变紫了！");
+    }
+
+    /// <summary>
+    /// 确保 Assets 目录下的文件夹安全创建，防止 Meta 文件丢失
+    /// </summary>
+    private static void CheckAndCreateFolder(string assetPath)
+    {
+        if (Directory.Exists(assetPath)) return;
+
+        string[] folders = assetPath.Split('/');
+        string currentPath = folders[0]; // 应该是 "Assets"
+
+        for (int i = 1; i < folders.Length; i++)
+        {
+            string nextPath = currentPath + "/" + folders[i];
+            if (!AssetDatabase.IsValidFolder(nextPath))
+            {
+                AssetDatabase.CreateFolder(currentPath, folders[i]);
+            }
+            currentPath = nextPath;
         }
     }
 }

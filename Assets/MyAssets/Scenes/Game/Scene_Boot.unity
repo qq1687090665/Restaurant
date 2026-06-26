@@ -792,7 +792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee9b8a10b2f5f6f4d8e7b555fc23f2b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayMode: 0
+  PlayMode: 2
   BaseServerUrl: 
   ProgressBar: {fileID: 329387051}
   ProgressText: {fileID: 2064776177}

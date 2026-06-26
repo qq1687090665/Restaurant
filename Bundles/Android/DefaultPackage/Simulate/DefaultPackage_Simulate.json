@@ -10,7 +10,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2026/6/26 17:41:47",
+    "PackageNote": "2026/6/26 23:57:10",
     "AssetList": [
         {
             "Address": "HotUpdate.dll",
